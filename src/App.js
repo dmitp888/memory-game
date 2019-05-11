@@ -17,7 +17,7 @@ class App extends Component {
   handleClick = (clicked)=> {
 
     console.log("clicked: " +clicked)
-    if (clicked === this.id) {
+    if (clicked ) {
       this.setState({ clicked:true })
       this.shuffleImages()
       this.setState({ CurrentScore: this.state.CurrentScore + 1 });
