@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "image": "https://miro.medium.com/max/1260/1*8sKUQPhzFHdWmP2V-G7hmQ.png",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "image": "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+    "clicked": false
+  }
+]
