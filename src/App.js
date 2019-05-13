@@ -8,17 +8,21 @@ import Shuffle from 'shuffle-array';
 
 class App extends Component {
   // Setting this.state.characters to the characters json array
-  state = {
+   state = {
     characters,
+    guess:characters.id,
     TopScore: 0,
     CurrentScore: 0
   };
 
   handleClick = (clicked)=> {
-
-    console.log("clicked: " +clicked)
-    if (clicked ) {
-      this.setState({ clicked:true })
+    console.log (this.guess)
+    let newState = { clicked:false  };
+console.log(newState)
+    // console.log("clicked: " )
+    if (newState) {
+      this.setState({ newState:true })
+      // Object.assign({newState:true})
       this.shuffleImages()
       this.setState({ CurrentScore: this.state.CurrentScore + 1 });
       this.setState({ TopScore: this.state.CurrentScore + 1 });
@@ -27,14 +31,10 @@ class App extends Component {
   this.setState({ CurrentScore: 0 });
     }
   };
-   // const btnType = event.target.attributes.getNamedItem("clicked").value;
-    // const newState = { ...this.state };
-    // console.log( "this.clicked:" + btnType)
-    // for(let i=0;i<characters.length;i++) {
-    //   console.log(  "this.state.characters" +this.state.character  )
+
+
+
   shuffleImages= ()  => {
-    // const characters = this.state.characters.filter(id => id.clicked !== true);
-    // this.setState({ characters });  
     this.setState({characters: Shuffle(characters)   });
     
   }
