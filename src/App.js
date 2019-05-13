@@ -4,65 +4,68 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import characters from "./characters.json";
 import Header from "./components/Header";
+import Scores from "./components/Scores";
+
 import Shuffle from 'shuffle-array';
 
 class App extends Component {
   // Setting this.state.characters to the characters json array
-   state = {
+  state = {
     characters,
-    guess:characters.id,
     TopScore: 0,
     CurrentScore: 0
   };
 
-  handleClick = (clicked)=> {
-    console.log (this.guess)
-    let newState = { clicked:false  };
-console.log(newState)
-    // console.log("clicked: " )
-    if (newState) {
-      this.setState({ newState:true })
-      // Object.assign({newState:true})
-      this.shuffleImages()
-      this.setState({ CurrentScore: this.state.CurrentScore + 1 });
-      this.setState({ TopScore: this.state.CurrentScore + 1 });
-    }else {
-  alert("you lose")
-  this.setState({ CurrentScore: 0 });
-    }
+  handleClick = id => {
+    let guessedCorrectly = false;
+    const newData = this.state.characters.map(item => {
+      const newItem = { ...item };
+      if (newItem.id === id) {
+        if (!newItem.clicked) {
+          newItem.clicked = true;
+          guessedCorrectly = true;
+        }
+      }
+      return newItem;
+    });
+    guessedCorrectly ?
+      this.shuffleImages(newData)
+      : this.lostGame()
   };
+  lostGame = () => {
+    this.setState({ CurrentScore: 0 });
+  }
 
-
-
-  shuffleImages= ()  => {
-    this.setState({characters: Shuffle(characters)   });
-    
+  shuffleImages = (newData) => {
+    this.setState({ characters: Shuffle(newData) });
+    this.setState({ CurrentScore: this.state.CurrentScore + 1 });
+    this.setState({ TopScore: this.state.CurrentScore + 1 });
   }
 
   render() {
     return (
-      <Wrapper>
-        <Header>
-          <Title>
-            {" "}
-            Memory clicky game CurrentScore: {this.state.CurrentScore}
-            
-            Top Score{this.state.TopScore}
-          </Title>
-        </Header>
-        {this.state.characters.map(character => (
-          <CharacterCard
-            id={character.id}
-            key={character.id}
-            image={character.image}
-            clicked={character.clicked}
-            handleClick={this.handleClick}
-            shuffleImages={this.shuffleImages}
-            
-          />
-          
-        ))}
-      </Wrapper>
+        <Wrapper>
+          <Header>
+            <Title>
+              Game of Thrones Memory Game
+             </Title>
+            <Scores>
+              Current Score: {this.state.CurrentScore}
+              {<p></p>}
+              Top Score: {this.state.TopScore}
+            </Scores>
+          </Header>
+          {this.state.characters.map(character => (
+            <CharacterCard
+              id={character.id}
+              key={character.id}
+              image={character.image}
+              clicked={character.clicked}
+              handleClick={this.handleClick}
+              shuffleImages={this.shuffleImages}
+            />
+          ))}
+        </Wrapper>
     );
   }
 }

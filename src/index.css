@@ -1,13 +1,9 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-image:url("http://images4.fanpop.com/image/photos/21700000/Iron-Throne-game-of-thrones-21729427-1600-1200.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
